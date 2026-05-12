@@ -1,0 +1,134 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  background:#08010f;
+  color:white;
+}
+
+.bg{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at top left,#ff00aa55,transparent 30%),
+    radial-gradient(circle at bottom right,#6a00ff55,transparent 35%),
+    linear-gradient(135deg,#090010,#14001f,#090010);
+  filter:blur(10px);
+  z-index:-1;
+}
+
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:20px;
+}
+
+.glass{
+  width:100%;
+  max-width:650px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:28px;
+  padding:40px;
+  box-shadow:0 0 30px rgba(255,0,200,0.25);
+}
+
+h1{
+  font-size:3rem;
+  margin-bottom:10px;
+  text-align:center;
+  background:linear-gradient(to right,#ff5fd2,#b388ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+  text-align:center;
+  opacity:0.8;
+  margin-bottom:35px;
+}
+
+.quiz{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+label{
+  font-size:1rem;
+  color:#ffc8f4;
+}
+
+select,input{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  font-size:1rem;
+}
+
+button{
+  margin-top:10px;
+  padding:16px;
+  border:none;
+  border-radius:18px;
+  background:linear-gradient(to right,#ff00aa,#7a00ff);
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 20px rgba(255,0,170,0.5);
+}
+
+.result{
+  margin-top:35px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  animation:fade 0.5s ease;
+}
+
+.hidden{
+  display:none;
+}
+
+.result h2{
+  margin-bottom:15px;
+  color:#ff8be9;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  border-radius:999px;
+  background:#ff00aa33;
+  color:#ffd5f7;
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}

@@ -1,42 +1,72 @@
-function generateResult(){
-  const energy = parseInt(document.getElementById('energy').value);
-  const experience = parseInt(document.getElementById('experience').value);
-  const intensity = parseInt(document.getElementById('intensity').value);
-  const aesthetic = parseInt(document.getElementById('aesthetic').value);
+function calculateSize(){
 
-  const score = energy + experience + intensity + aesthetic;
+  const experience = parseInt(document.getElementById("experience").value);
+  const comfort = parseInt(document.getElementById("comfort").value);
+  const adventure = parseInt(document.getElementById("adventure").value);
+  const intensity = parseInt(document.getElementById("intensity").value);
+  const priority = parseInt(document.getElementById("priority").value);
 
-  let title = "";
+  const total =
+    experience +
+    comfort +
+    adventure +
+    intensity +
+    priority;
+
+  let size = "";
   let description = "";
-  let badge = "";
+  let inches = "";
 
-  if(score <= 7){
-    title = "Soft Launch 🍓";
-    description = "You match best with slimmer, beginner-friendly sizes that focus on comfort, softness, and playful exploration.";
-    badge = "Cute Energy";
+  if(total <= 8){
+    size = "Extra Small 🍓";
+    inches = "3 - 4 inches";
+    description =
+      "Best for beginners, comfort-focused users, and gentle exploration.";
   }
-  else if(score <= 11){
-    title = "Good Girl Energy 💕";
-    description = "Balanced sizes fit your vibe best — enough confidence to explore while still keeping things elegant and smooth.";
-    badge = "Velvet Vibes";
+
+  else if(total <= 12){
+    size = "Small 💕";
+    inches = "4 - 5 inches";
+    description =
+      "A balanced beginner-friendly option with slightly more fullness.";
   }
-  else if(score <= 15){
-    title = "Main Character 💋";
-    description = "You like confidence, presence, and intensity. Medium-to-bold sizing matches your powerful energy.";
-    badge = "Luxury Chaos";
+
+  else if(total <= 17){
+    size = "Medium 💋";
+    inches = "5 - 6 inches";
+    description =
+      "The most versatile range with balanced comfort and intensity.";
   }
+
+  else if(total <= 21){
+    size = "Large 😈";
+    inches = "6 - 7 inches";
+    description =
+      "For users who enjoy stronger fullness and more intensity.";
+  }
+
   else{
-    title = "Chaos Mode 😈";
-    description = "You're bold, adventurous, and dramatic. Larger statement pieces match your fearless aesthetic.";
-    badge = "Certified Trouble";
+    size = "Extra Large 🔥";
+    inches = "7+ inches";
+    description =
+      "Best suited for very experienced and highly adventurous users.";
   }
 
-  const result = document.getElementById('result');
-  result.classList.remove('hidden');
+  const result = document.getElementById("result");
+
+  result.classList.remove("hidden");
 
   result.innerHTML = `
-    <h2>${title}</h2>
+    <h2>${size}</h2>
+
+    <p><strong>Recommended Range:</strong> ${inches}</p>
+
+    <br>
+
     <p>${description}</p>
-    <div class="badge">${badge}</div>
+
+    <div class="size-tag">
+      Personalized Match
+    </div>
   `;
 }

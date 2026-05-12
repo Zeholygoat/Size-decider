@@ -3,57 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Euphoria Size Match</title>
+  <title>Size Match Quiz</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="bg"></div>
 
-  <main class="container">
-    <div class="glass">
-      <h1>Euphoria Size Match 💋</h1>
-      <p class="subtitle">
-        Find the size that matches your vibe, confidence, and energy.
-      </p>
+<div class="bg"></div>
 
-      <div class="quiz">
-        <label>What's your energy tonight?</label>
-        <select id="energy">
-          <option value="1">Soft & Sweet</option>
-          <option value="2">Flirty</option>
-          <option value="3">Confident</option>
-          <option value="4">Dangerous</option>
-          <option value="5">Chaos Mode</option>
-        </select>
+<div class="container">
+  <div class="card">
 
-        <label>How experienced are you?</label>
-        <select id="experience">
-          <option value="1">Beginner</option>
-          <option value="2">Curious</option>
-          <option value="3">Comfortable</option>
-          <option value="4">Experienced</option>
-          <option value="5">Expert</option>
-        </select>
+    <h1>Size Match 💋</h1>
+    <p class="subtitle">
+      Answer a few questions and discover your ideal dildo size.
+    </p>
 
-        <label>How intense do you like things?</label>
-        <input type="range" min="1" max="5" value="3" id="intensity"/>
+    <div class="quiz">
 
-        <label>Choose your aesthetic</label>
-        <select id="aesthetic">
-          <option value="1">Soft Pink</option>
-          <option value="2">Luxury Black</option>
-          <option value="3">Neon Purple</option>
-          <option value="4">Velvet Red</option>
-          <option value="5">Cyber Angel</option>
-        </select>
+      <label>How experienced are you?</label>
+      <select id="experience">
+        <option value="1">Complete Beginner</option>
+        <option value="2">Some Experience</option>
+        <option value="3">Comfortable</option>
+        <option value="4">Experienced</option>
+        <option value="5">Very Experienced</option>
+      </select>
 
-        <button onclick="generateResult()">Reveal My Match ✨</button>
-      </div>
+      <label>What sounds most comfortable to you?</label>
+      <select id="comfort">
+        <option value="1">Something slim & gentle</option>
+        <option value="2">A little fullness</option>
+        <option value="3">Balanced feeling</option>
+        <option value="4">Noticeable fullness</option>
+        <option value="5">Maximum fullness</option>
+      </select>
 
-      <div id="result" class="result hidden"></div>
+      <label>How adventurous are you?</label>
+      <select id="adventure">
+        <option value="1">Very cautious</option>
+        <option value="2">Curious</option>
+        <option value="3">Open-minded</option>
+        <option value="4">Bold</option>
+        <option value="5">Extremely adventurous</option>
+      </select>
+
+      <label>Preferred intensity level</label>
+      <input type="range" min="1" max="5" value="3" id="intensity"/>
+
+      <label>What matters most?</label>
+      <select id="priority">
+        <option value="1">Comfort</option>
+        <option value="2">Ease of use</option>
+        <option value="3">Balanced experience</option>
+        <option value="4">Fullness</option>
+        <option value="5">Intensity</option>
+      </select>
+
+      <button onclick="calculateSize()">
+        Reveal My Size ✨
+      </button>
+
     </div>
-  </main>
 
-  <script src="script.js"></script>
+    <div class="result hidden" id="result"></div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

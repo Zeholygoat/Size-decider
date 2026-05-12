@@ -1,4 +1,4 @@
-# Euphoria Size Match 💋
+Size Match 💋
 
 A playful neon-themed personality quiz website inspired by the visual vibes of Euphoria.
 

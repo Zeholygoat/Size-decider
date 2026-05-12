@@ -3,63 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Size Match Quiz</title>
+  <title>Size Match 💋</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
 
-<div class="bg"></div>
+<div class="background"></div>
 
 <div class="container">
+
   <div class="card">
 
     <h1>Size Match 💋</h1>
+
     <p class="subtitle">
-      Answer a few questions and discover your ideal dildo size.
+      Discover your ideal size based on your comfort, confidence, and vibe.
     </p>
 
     <div class="quiz">
 
-      <label>How experienced are you?</label>
-      <select id="experience">
-        <option value="1">Complete Beginner</option>
-        <option value="2">Some Experience</option>
-        <option value="3">Comfortable</option>
-        <option value="4">Experienced</option>
-        <option value="5">Very Experienced</option>
-      </select>
+      <!-- QUESTION 1 -->
+      <div class="question">
 
-      <label>What sounds most comfortable to you?</label>
-      <select id="comfort">
-        <option value="1">Something slim & gentle</option>
-        <option value="2">A little fullness</option>
-        <option value="3">Balanced feeling</option>
-        <option value="4">Noticeable fullness</option>
-        <option value="5">Maximum fullness</option>
-      </select>
+        <h3>How experienced are you? 💕</h3>
 
-      <label>How adventurous are you?</label>
-      <select id="adventure">
-        <option value="1">Very cautious</option>
-        <option value="2">Curious</option>
-        <option value="3">Open-minded</option>
-        <option value="4">Bold</option>
-        <option value="5">Extremely adventurous</option>
-      </select>
+        <div class="options" data-question="experience">
 
-      <label>Preferred intensity level</label>
-      <input type="range" min="1" max="5" value="3" id="intensity"/>
+          <button class="option" data-value="1">
+            Never tried anything
+          </button>
 
-      <label>What matters most?</label>
-      <select id="priority">
-        <option value="1">Comfort</option>
-        <option value="2">Ease of use</option>
-        <option value="3">Balanced experience</option>
-        <option value="4">Fullness</option>
-        <option value="5">Intensity</option>
-      </select>
+          <button class="option" data-value="2">
+            Still kinda shy
+          </button>
 
-      <button onclick="calculateSize()">
+          <button class="option" data-value="3">
+            Comfortable & curious
+          </button>
+
+          <button class="option" data-value="4">
+            Pretty experienced
+          </button>
+
+          <button class="option" data-value="5">
+            Certified troublemaker
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- QUESTION 2 -->
+      <div class="question">
+
+        <h3>What sounds best to you? 🔥</h3>
+
+        <div class="options" data-question="fullness">
+
+          <button class="option" data-value="1">
+            Cute & gentle
+          </button>
+
+          <button class="option" data-value="2">
+            A little fullness
+          </button>
+
+          <button class="option" data-value="3">
+            Balanced pressure
+          </button>
+
+          <button class="option" data-value="4">
+            Strong fullness
+          </button>
+
+          <button class="option" data-value="5">
+            Maximum intensity
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- QUESTION 3 -->
+      <div class="question">
+
+        <h3>Pick your energy tonight 😈</h3>
+
+        <div class="options" data-question="vibe">
+
+          <button class="option" data-value="1">
+            Soft princess
+          </button>
+
+          <button class="option" data-value="2">
+            Flirty energy
+          </button>
+
+          <button class="option" data-value="3">
+            Main character
+          </button>
+
+          <button class="option" data-value="4">
+            Brat mode
+          </button>
+
+          <button class="option" data-value="5">
+            Absolute chaos
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- QUESTION 4 -->
+      <div class="question">
+
+        <h3>How intense do you want it? 💜</h3>
+
+        <div class="options" data-question="intensity">
+
+          <button class="option" data-value="1">
+            Very gentle
+          </button>
+
+          <button class="option" data-value="2">
+            Soft but exciting
+          </button>
+
+          <button class="option" data-value="3">
+            Balanced
+          </button>
+
+          <button class="option" data-value="4">
+            Pretty intense
+          </button>
+
+          <button class="option" data-value="5">
+            Maximum intensity
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- QUESTION 5 -->
+      <div class="question">
+
+        <h3>How adventurous are you? ✨</h3>
+
+        <div class="options" data-question="adventure">
+
+          <button class="option" data-value="1">
+            Very cautious
+          </button>
+
+          <button class="option" data-value="2">
+            A little curious
+          </button>
+
+          <button class="option" data-value="3">
+            Open-minded
+          </button>
+
+          <button class="option" data-value="4">
+            Bold & confident
+          </button>
+
+          <button class="option" data-value="5">
+            I want a challenge
+          </button>
+
+        </div>
+
+      </div>
+
+      <button class="reveal-btn" onclick="calculateSize()">
         Reveal My Size ✨
       </button>
 
@@ -68,8 +187,10 @@
     <div class="result hidden" id="result"></div>
 
   </div>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>

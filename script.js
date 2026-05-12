@@ -24,7 +24,7 @@ function calculateSize(){
 
   const values = Object.values(answers);
 
-  if(values.length < 5){
+  if(values.length < 7){
 
     alert("Answer all questions first 💋");
 
@@ -37,7 +37,7 @@ function calculateSize(){
   let inches = "";
   let description = "";
 
-  if(total <= 8){
+  if(total <= 11){
 
     size = "Extra Small 🍓";
 
@@ -47,7 +47,7 @@ function calculateSize(){
       "You match best with slimmer, beginner-friendly sizes focused on comfort, softness, and gentle exploration.";
   }
 
-  else if(total <= 12){
+  else if(total <= 17){
 
     size = "Small 💕";
 
@@ -57,7 +57,7 @@ function calculateSize(){
       "You enjoy a little extra fullness while still keeping things smooth, playful, and easy to handle.";
   }
 
-  else if(total <= 17){
+  else if(total <= 24){
 
     size = "Medium 💋";
 
@@ -67,7 +67,7 @@ function calculateSize(){
       "Balanced, confident, and versatile — enough fullness to feel exciting without being overwhelming.";
   }
 
-  else if(total <= 21){
+  else if(total <= 30){
 
     size = "Large 😈";
 
